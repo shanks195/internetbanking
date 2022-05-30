@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../bootstrap-4.5.2/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="../bootstrap-4.5.2/css/mybootstrap.css">
+        <link rel="stylesheet" href="mystyle.css">
+        
+        <script src="../jquery/jquery-3.5.1.js"></script>  
+        
+        <script src="../bootstrap-4.5.2/js/bootstrap.min.js"></script>
+     
+        <script>
+            $(document).ready(function(){
+                /*$(".collapse").on('shown.bs.collapse',function(){
+                    $(this).parent().children().find('.glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up').on('hidden.bs.collapse',function(){
+                       $(this).parent().find('.glyphicon-menu-up').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+                    });
+                    
+                });*/
+                $(".collapse").on('shown.bs.collapse',function(){
+                    $(this).parent().children().find('.glyphicon-menu-down').removeClass('glyphicon-menu-down').addClass('glyphicon-menu-up');
+                });
+           
+                $(".collapse").on('hidden.bs.collapse',function(){
+                    $(this).parent().children().find('.glyphicon-menu-up').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+                });
+           
+            });
+        </script>
+        
+    </head>
+    <body>
+        <div class="container">
+             <div class="accordion">
+                <div class="card" style="width:400px">
+                    <!--
+                    <div class="card-header" data-toggle="collapse" data-target="#collapseOne">
+                        <span class="glyphicon glyphicon-menu-down"></span> Danh sách các món ăn
+                    </div>
+                    -->
+                    <a class="card-header" data-toggle="collapse" href="#collapseOne">
+                        <span class="glyphicon glyphicon-menu-down"></span> Điện thoại Iphone
+                    </a>
+                    
+                    <ul class="list-group collapse" id="collapseOne">
+                        <li class="list-group-item"> iPhone 12 Pro<span class="badge float-right badge-success">1</span> </li>                    
+                        <li class="list-group-item"> iPhone 11 Pro Max<span class="badge float-right badge-primary">2</span></li>
+                        <li class="list-group-item"> iPhone 11 Pro <span class="badge float-right badge-warning">3</span></li>
+                    </ul>
+                </div>
+                 <div class="card" style="width:400px">
+                   <!--
+                    <div class="card-header" data-toggle="collapse" data-target="#collapseTwo">
+                        <span class="glyphicon glyphicon-menu-down"></span> Danh sách nước uống
+                    </div>
+                     --> 
+                    <a class="card-header" data-toggle="collapse" href="#collapseTwo">
+                        <span class="glyphicon glyphicon-menu-down"></span> Điện thoại Samsung
+                    </a>
+                     
+                    <ul class="list-group collapse" id="collapseTwo">
+                        <li class="list-group-item"> Samsung Galaxy Note 10+ </li>                    
+                        <li class="list-group-item"> Samsung Galaxy Note 9</li>
+                        <li class="list-group-item"> Samsung Galaxy Z Flip</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
